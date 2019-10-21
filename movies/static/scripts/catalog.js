@@ -2,7 +2,7 @@ function displayMovie(movie) {
     console.log(movie);
     var container = $(".cat-container");
     var li = `
-    <div class="card" style="width: 18rem;">
+    <div class="card text-center" style="width: 18rem;">
         <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/MicroQR_Example.png" class="card-img-top" alt="movie image">
         <div class="card-body">
             <h5 class="card-title">${movie.title}</h5>
