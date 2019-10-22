@@ -3,7 +3,7 @@ function displayMovie(movie) {
     var container = $(".cat-container");
     var li = `
     <div class="card text-center">
-        <img src="${movie.image_url}" class="card-img-top" alt="movie image">
+        <img src="${movie.image}" class="card-img-top" alt="movie image">
         <div class="card-body">
             <h5 class="card-title">${movie.title}</h5>
             <p class="card-text">${movie.release_year}</p>

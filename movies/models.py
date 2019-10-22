@@ -38,6 +38,7 @@ class Movie(models.Model):
     price = models.FloatField()
     duration_min = models.IntegerField()
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='images/')
 
     def __str__(self):
         return str(self.id) + " | " + str(self.release_year) + " | " + self.title
