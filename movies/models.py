@@ -32,6 +32,7 @@ class Series(models.Model):
 
 class Movie(models.Model):
     title = models.CharField(max_length=250)
+    image_url = models.CharField(max_length=250)
     release_year = models.IntegerField()
     in_stock = models.IntegerField()
     price = models.FloatField()

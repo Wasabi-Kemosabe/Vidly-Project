@@ -2,8 +2,8 @@ function displayMovie(movie) {
     console.log(movie);
     var container = $(".cat-container");
     var li = `
-    <div class="card text-center" style="width: 18rem;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/MicroQR_Example.png" class="card-img-top" alt="movie image">
+    <div class="card text-center">
+        <img src="${movie.image_url}" class="card-img-top" alt="movie image">
         <div class="card-body">
             <h5 class="card-title">${movie.title}</h5>
             <p class="card-text">${movie.release_year}</p>
