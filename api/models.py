@@ -6,7 +6,17 @@ from tastypie.authorization import Authorization
 # Create your models here.
 
 
+class GenreResource(ModelResource):
+    class Meta:
+        queryset = Genre.objects.all()
+        resource_name = 'genres'
+        allowed_method = ['get', 'post', 'put', 'patch', 'delete']
+        authorization = Authorization()
+
+
 class MovieResource(ModelResource):
+    genre = fields.ToOneField(GenreResource, 'genre', full=True)
+
     class Meta:
         queryset = Movie.objects.all()
         resource_name = 'movies'
@@ -18,14 +28,6 @@ class MovieResource(ModelResource):
             "in_stock": ALL,
             "duration_min": ALL
         }
-
-
-class GenreResource(ModelResource):
-    class Meta:
-        queryset = Genre.objects.all()
-        resource_name = 'genres'
-        allowed_method = ['get', 'post', 'put', 'patch', 'delete']
-        authorization = Authorization()
 
 
 """

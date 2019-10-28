@@ -6,7 +6,7 @@ function displayMovie(movie) {
         <img src="${movie.image}" class="card-img-top" alt="movie image">
         <div class="card-body">
             <h5 class="card-title">${movie.title}</h5>
-            <p class="card-text">${movie.release_year}</p>
+            <p class="card-text">${movie.genre.name}</p>
             <a href="#" class="btn btn-primary">Click here for details!</a>
         </div>
     </div>
