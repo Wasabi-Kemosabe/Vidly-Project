@@ -57,3 +57,5 @@ function init() {
 }
 
 window.onload = init();
+
+// Testing out Git commands
